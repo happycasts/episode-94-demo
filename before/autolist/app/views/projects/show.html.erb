@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="nav">
+    <span>Collaborators</span>
+    <%= link_to 'Home', root_path %>
+  </div>
+  <ul class="collabs wrapper">
+    <% if @collaborators.present? %>
+      <% @collaborators.each do |user| %>
+        <li class="uid-<%= user.id %>">
+          <span><%= user.name %></span>
+          <%= link_to 'Delete', project_path(:collab => user.name), :method => :delete,
+            :class => "btn btn-danger right" %>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+
+  <%= form_tag add_collaborator_path, :method => :post do %>
+    <%= text_field_tag :collab, '', :size => 25 %>
+    <%= button_tag 'Add collaborator', :class => 'btn btn-success btn-collab' %>
+  <% end %>
+
+  <div class="collab-error">
+    <%= flash[:notice] %>
+  </div>
+</div>

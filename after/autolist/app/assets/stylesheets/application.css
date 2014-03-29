@@ -1,0 +1,84 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require jquery.ui.autocomplete
+ *= require_tree .
+ */
+  .container {
+   width: 600px;
+   margin: 50px auto;
+   color: #555;
+ }
+ .wrapper {
+   margin-top: 30px;
+   border: 1px solid #ddd;
+ }
+ a {
+   color: #2679b5;
+ }
+ ul {
+   list-style-type: none;
+   padding-left: 0;
+ }
+ li {
+   display: block;
+   border-bottom: 1px solid #E5E5E5;
+   padding: 20px;
+   line-height: 30px
+ }
+ li:last-child {
+   border-bottom: none;
+ }
+ .nav {
+   font-size: 18px;
+ }
+ .nav span {
+   font-size: 25px;
+   font-weight: bold;
+   margin-right: 20px;
+ }
+ img {
+   display: inline-block;
+   width: 30px;
+   height: 30px;
+   vertical-align: middle;
+   margin-right: 5px;
+ }
+ .right {
+   float: right;
+ }
+ .btn {
+   display: inline-block;
+   padding: 0 12px;
+   font-size: 13px;
+   font-weight: bold;
+   border: 1px solid #ddd;
+   text-decoration: none;
+   text-align: center;
+ }
+ .btn-danger {
+   background-color: #D15B47;
+   border-color: #D15B47;
+   color: white;
+ }
+ .btn-danger:hover {
+   background-color: #B74635!important;
+   border-color: #D15B47;
+ }
+ .btn-success, .btn-success:disabled, .btn-success:disabled:hover {
+   background-color: #87B87F!important;
+   border-color: #87B87F;
+   color: white;
+ }
+ .btn-success:hover {
+   background-color: #629B58!important;
+   border-color: #87B87F;
+ }
